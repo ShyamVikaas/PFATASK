@@ -1,0 +1,33 @@
+h1{
+    color:#FFFFFF ;
+    background-color:#ffa07a ;
+    font-family: 'Courier New';
+}
+body{
+    background-color:#fffacd ;
+    text-align: center;
+}
+.Ebill{
+font-family: Arial;
+width: 300px;
+background-color: #5f9ea0  ;
+color: white;
+text-align: center;
+border-collapse:collapse; 
+margin: auto;
+padding: 20px;
+border-radius: 10px;
+}
+table{
+    justify-content: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+tr,td{
+    border: 2px solid #ddd;
+    padding: 8px;
+}
+result{
+    color:#770080 ;
+    font-weight: bold;
+}

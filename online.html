@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Online.css">
+    <script src="online.js">
+    </script>
+</head>
+<body>
+    <h1 >Welcome to Adi-Online Shopping</h1>
+    <form action="/process_order" method="post" id="productForm" onsubmit="return calculateFinalAmount();"></form>
+    <table  id="Ebill" >
+        <tr>
+            <td>
+                <label for="custname">Customer Name</label>
+            </td>
+            <td>
+                <input type="text" id="custname" name="custname" pattern="[A-Za-z\s]+" placeholder="Enter Customer Name" required> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="mobileNumber">Mobile Number</label>
+            </td>
+            <td>
+                <input type="tel" id="mobileNo" name="mobileNo" placeholder="Enter your mobile number" pattern="[789]\d{9}" required>            
+            </td>
+        </tr>      
+        <tr>
+            <td>
+                <label for="email">Email ID</label>
+            </td>
+            <td>
+                <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="address">Billing Address</label>
+            </td>
+            <td>
+                <textarea id="address" name="address" rows="5" cols="20" placeholder="Enter Your Address" required></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="product">Choose Product</label>
+            </td>
+            <td>
+                <select id="product" name="Product" placeholder="Tv">
+                    <option id="TV"value="1">TV</option>
+                    <option id="Fridge" value="2">Refrigerator</option>
+                    <option id="Mobile" value="3">Mobile</option>
+                  </select>  
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="quantity">Enter Quantity</label>
+            </td>
+            <td>
+                <input type="number" id="quantity" name="quantity" min="1" placeholder="Enter Quantity">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Mode">Payment Mode</label>
+            </td>
+            <td>
+                <select id="Mode" name="Mode" placeholder="Payment Mode">
+                    <option id="cash"value="1">Cash on Delivery</option>
+                    <option id="Debit" value="2">Debit Card</option>
+                    <option id="UPI" value="3">UPI Transfer</option>
+                  </select>  
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="bill">Bag Total</label>
+            </td>
+            <td>
+                <input type="number" id="bill" name="bill" min="1" >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="coupon">Coupon Code</label>
+            </td>
+            <td>
+                <input type="text" id="coupon" name="coupon" readonly required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="delivery">Delivery Options</label>
+            </td>
+            <td>
+                <label>
+                    <input type="radio" value="express" id="express" name="delivery"> Express</label>
+                    <label>
+                    <input value="Standard" type="radio" id="standard" name="delivery"> Standard</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label><input type="checkbox" disabled>I Agree to the Terms & Conditions</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="reset">Clear</button>
+            </td>
+            <td>
+                <button type="submit" value="Calculate Total">chk.Amount Payable</button>
+            </td>
+        </tr>
+        <td colspan="2">
+            <div id="result"></div>
+          </td>
+
+    </table>
+</form>
+</body>
+</html>
